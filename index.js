@@ -27,13 +27,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'))
-app.use(express.static(path.join(__dirname, "/dist")))
+app.use(express.static(path.join(__dirname, "./dist")))
 
 
 
 //Rest APi
  app.use('*', function(req, res){
-     res.sendFile(path.join(__dirname, '/dist/index.html'))
+     res.sendFile(path.join(__dirname, './dist/index.html'))
  })
 
 //! API
